@@ -26,6 +26,8 @@ app.register_blueprint(Checkout)
 app.register_blueprint(Payment)
 
 
-app.secret_key="abc123"
+import os
+app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
+
