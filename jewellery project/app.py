@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from flask import Flask
 from controllers.type_controllers import type_bp
 from controllers.customer_controllers import customer_bp
